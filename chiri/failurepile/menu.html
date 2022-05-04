@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja-JP">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>up</title>
+<style>*{margin:0;}</style>
+</head>
+<body onload="document.VIP.NF.focus()">
+<form method="" name="VIP" target="down" action="failurepile/menu.html" onsubmit="rule(),setTimeout(&#39;autoclear()&#39;,20)">
+<input type="hidden" name="autoclear" value="Yes">
+<input type="hidden" name="F">
+<input type="hidden" name="DX">
+<input type="hidden" name="sea">
+<input type="hidden" name="mode"><!--cgiフレーム-->
+<input type="hidden" name="name"><!--cgi名前-->
+<input type="hidden" name="fontstylies"><!--cgiフォント-->
+<input type="hidden" name="mozisize"><!--cgiサイズ-->
+<input type="hidden" name="emoji"><!--cgi発言後-->
+<input type="hidden" name="window"><!--cgi行-->
+<input type="hidden" name="reload"><!--cgi更-->
+<div align="right"><select name="add" id="font2" onchange="document.VIP.sendvip.click()">
+<option value="header.html" id="color2">人数一覧</option>
+<optgroup label="初心者">
+<option value="http://chat.studio.cx/o-cha/jsp/superbeginner/chat.php" id="color1">超初心者</option>
+<option value="http://chat.studio.cx/o-cha/jsp/hajime/chat.php" id="color1">始めまし</option>
+<option value="http://chat.studio.cx/o-cha/jsp/ofall/chat.php" id="color1">みんなの</option>
+<option value="http://chat.studio.cx/o-cha/jsp/yume/chat.php" id="color1">夢と希望</option>
+</optgroup><optgroup label="学生">
+<option value="http://chat.studio.cx/o-cha/jsp/elementary/chat.php" id="color1">小学生</option>
+<option value="http://chat.studio.cx/o-cha/jsp/juniorhighschool/chat.php" id="color1">中学生</option>
+<option value="http://chat.studio.cx/o-cha/jsp/juniorhighschool3/chat.php" id="color1">中学生3</option>
+<option value="http://chat.studio.cx/o-cha/jsp/highschool/chat.php" id="color1">高校生</option>
+<option value="http://chat.studio.cx/o-cha/jsp/daigaku/chat.php" id="color1">大学生</option>
+</optgroup><optgroup label="年代別">
+<option value="http://chat.studio.cx/o-cha/jsp/10generations/chat.php" id="color1">10代</option>
+<option value="http://chat.studio.cx/o-cha/jsp/20generations/chat.php" id="color1">20代</option>
+<option value="http://chat.studio.cx/o-cha/jsp/30generations/chat.php" id="color1">30代</option>
+</optgroup><optgroup label="日常">
+<option value="http://chat.studio.cx/o-cha/jsp/umaimise/chat.php" id="color1">旨い店</option>
+<option value="http://chat.studio.cx/o-cha/jsp/osare/chat.php" id="color1">お洒落</option>
+<option value="http://chat.studio.cx/o-cha/jsp/news/chat.php" id="color1">ニュース</option>
+<option value="http://chat.studio.cx/o-cha/jsp/jinsei/chat.php" id="color1">人生相談</option>
+</optgroup><optgroup label="アニメ">
+<option value="http://chat.studio.cx/o-cha/jsp/anime/chat.php" id="color1">アニメ</option>
+<option value="http://chat.studio.cx/o-cha/jsp/reborn/chat.php" id="color1">リボーン</option>
+<option value="http://chat.studio.cx/o-cha/jsp/monhan/chat.php" id="color1">モンハン</option>
+<option value="http://chat.studio.cx/o-cha/jsp/kintama/chat.php" id="color1">銀魂</option>
+<option value="http://chat.studio.cx/o-cha/jsp/rozen/chat.php" id="color1">ローゼン</option>
+</optgroup><optgroup label="ゲーム">
+<option value="http://chat.studio.cx/o-cha/jsp/game/chat.php" id="color1">ゲーム</option>
+<option value="http://chat.studio.cx/o-cha/jsp/pazudora/chat.php" id="color1">パズドラ</option>
+<option value="http://chat.studio.cx/o-cha/jsp/3ds/chat.php" id="color1">3DS</option>
+</optgroup><optgroup label="季節">
+<option value="http://chat.studio.cx/o-cha/jsp/natsuyasumi/chat.php" id="color1">夏休み</option>
+<option value="http://chat.studio.cx/o-cha/jsp/hanabi-taikai/chat.php" id="color1">花火大会</option>
+<option value="http://chat.studio.cx/o-cha/jsp/haruyasumi/chat.php" id="color1">春休み</option>
+</optgroup><optgroup label="地域">
+<option value="http://chat.studio.cx/o-cha/jsp/area_kantoh/chat.php" id="color1">関東</option>
+<option value="http://chat.studio.cx/o-cha/jsp/area_hok_touho/chat.php" id="color1">北海東北</option>
+<option value="http://chat.studio.cx/o-cha/jsp/area_toukai/chat.php" id="color1">東海</option>
+<option value="http://chat.studio.cx/o-cha/jsp/area_kansai/chat.php" id="color1">関西</option>
+<option value="http://chat.studio.cx/o-cha/jsp/area_chu_shi/chat.php" id="color1">中国四国</option>
+<option value="http://chat.studio.cx/o-cha/jsp/area_kyu_oki/chat.php" id="color1">九州沖縄</option>
+</optgroup><optgroup label="趣味">
+<option value="http://chat.studio.cx/o-cha/jsp/music/chat.php" id="color1">音楽</option>
+<option value="http://chat.studio.cx/o-cha/jsp/dance/chat.php" id="color1">ダンス</option>
+<option value="http://chat.studio.cx/o-cha/jsp/travel/chat.php" id="color1">旅行</option>
+<option value="http://chat.studio.cx/o-cha/jsp/darts/chat.php" id="color1">ダーツ</option>
+<option value="http://chat.studio.cx/o-cha/jsp/tabletennis/chat.php" id="color1">卓球</option>
+</optgroup><optgroup label="特殊">
+<option value="http://chat.studio.cx/o-cha/jsp/nibiru/chat.php" id="color1">ニビル</option>
+<option value="http://chat.studio.cx/o-cha/jsp/omikuji/chat.php" id="color1">おみくじ</option>
+<option value="http://chat.studio.cx/o-cha/jsp/mico/chat.php" id="color1">カオス</option>
+<option value="http://chat.studio.cx/o-cha/jsp/puchi/chat.php" id="color1">プチ</option>
+<option value="http://chat.studio.cx/o-cha/jsp/gyamikuji/chat.php" id="color1">ギャル</option>
+</optgroup><optgroup label="歴史的">
+<option value="http://chat.studio.cx/o-cha/jsp/vip/chat.php" id="color1">VIP</option>
+<option value="http://p-chat.okiraku-chat.com/hajime/chat.cgi" id="color1">初めて</option>
+<option value="http://p-chat.okiraku-chat.com/mattari/chat.cgi" id="color1">またり</option>
+<option value="http://p-chat.okiraku-chat.com/wai2/chat.cgi" id="color1">わい</option>
+<option value="http://p-chat.okiraku-chat.com/joren/chat.cgi" id="color1">常連</option>
+<option value="http://p-chat.okiraku-chat.com/shouchu/chat.cgi" id="color1">小中</option>
+<option value="http://p-chat.okiraku-chat.com/20dai/chat.cgi" id="color1">20代</option>
+<option value="http://p-chat.okiraku-chat.com/30dai/chat.cgi" id="color1">30代</option>
+</optgroup><optgroup label="非公開">
+<option value="http://chat.studio.cx/o-cha/jsp/jishin/chat.php" id="color1">地震</option>
+<option value="http://chat.studio.cx/o-cha/jsp/juken/chat.php" id="color1">受験生</option>
+<option value="http://chat.studio.cx/o-cha/jsp/bk_brain/chat.php" id="color1">能トレ</option>
+<option value="http://chat.studio.cx/o-cha/jsp/soccer/chat.php" id="color1">サッカー</option>
+<option value="http://chat.studio.cx/o-cha/syo_chou/chat.cgi" id="color1">素超初</option></optgroup>
+</select><select name="navi">
+<option value="./error.htm" id="color2">ｵﾌﾟｼｮﾝ
+</option><option value="./clear.htm">消去
+</option><option value="./rom_rank.htm">ﾛﾑﾗﾝｸ
+</option><option value="./header.html">参加数
+</option><option value="./new.htm">入通知
+</option><option value="http://www.okiraku-chat.com/">☆ﾄｯﾌﾟ
+</option><option value="http://www.okiraku-chat.com/i/">☆携帯
+</option><option value="http://www.okiraku-chat.com/mail/">☆ﾒｰﾙ
+</option><option value="http://www.okiraku-chat.com/ranking/">☆ﾗﾝｸ
+</option><option value="http://p-chat.okiraku-chat.com/">ゆい
+</option><option value="http://vururu.jp/cptop.php">Vﾌﾟﾛﾌ
+</option><option value="./tag.htm">ｺﾏﾝﾄﾞ
+</option><option value="./option/wframe.htm">罠作成
+</option><option value="../header.html">更新ﾛｸﾞ
+</option><option value="../../index.htm">塵ﾄｯﾌﾟ
+</option></select><input type="button" value=")" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" onclick="parent.down.location.href = this.form.navi.options[this.form.navi.selectedIndex].value" id="button1" style="background-color: rgb(51, 51, 51);">
+<br><font face="HGP創英角ﾎﾟｯﾌﾟ体"><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="タグ無効"><input type="checkbox" name="S" value="1" id="S"><label for="S">タグ無</label></font></span><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="全表示"><input type="checkbox" name="A" value="1" id="A"><label for="A">全表示</label></font></span><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="高速表示"><input type="checkbox" name="L" value="1" id="L"><label for="L">速表示</label></font></span>|<span style="cursor:pointer" onclick="romloc()" target="down"><font color="ff69b4" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;ff69b4&#39;" size="2" title="ロム一覧">人数</font></span><br><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="タグ非入力"><input type="checkbox" name="escape" id="E"><label for="E">タグ非</label></font></span><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="細字表示"><input type="checkbox" name="B" value="1" id="B"><label for="B">細表示</label></font></span><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="GZIP圧縮"><input type="checkbox" name="G" value="1" id="G"><label for="G">Ｇ圧縮</label></font></span>|<span style="cursor:pointer" onclick="rankloc()" target="down"><font color="ffa500" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;ffa500&#39;" size="2" title="ランキング一覧">順位</font></span><br><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="顔文字無効"><input type="checkbox" name="CHARA" value="1" id="C"><label for="C">顔無効</label></font></span><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="細字"><input type="checkbox" name="BL" value="1" id="BL"><label for="BL">細文字</label></font></span><span><font color="000000" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;000000&#39;" size="1" title="斜体"><input type="checkbox" name="IL" value="1" id="IL"><label for="IL">斜体字</label></font></span>|<span style="cursor:pointer" onclick="clearloc()" target="down"><font color="9932cc" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;9932cc&#39;" size="2" title="発言消去">削除</font></span><br><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="名前色ランダム"><input type="checkbox" name="rc" id="rcc" class="chk"><label for="rcc">名色乱</label></font></span><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="発言色ランダム"><input type="checkbox" name="rm" id="rmc" class="chk"><label for="rmc">発色乱</label></font></span><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="サイズランダム"><input type="checkbox" name="rs" id="rsc" class="chk"><label for="rsc">大小乱</label></font></span>|<span style="cursor:pointer" onclick="reportloc()" target="down"><font color="0095d9" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;0095d9&#39;" size="2" title="通報">通報</font></span><br><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="背景ランダム"><input type="checkbox" name="bg" id="bgc" class="chk"><label for="bgc">背景乱</label></font></span><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="装飾ランダム"><input type="checkbox" name="bd" id="bdc" class="chk"><label for="bdc">装飾乱</label></font></span><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="アイコンランダム"><input type="checkbox" name="cp" id="cpc" class="chk"><label for="cpc">画像乱</label></font></span>|<span style="cursor:pointer" onclick="newloc()" target="down"><font color="0095d9" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;0095d9&#39;" size="2" title="通知">通知</font></span><br><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="文頭ランダム"><input type="checkbox" name="rf" id="rfc" class="chk"><label for="rfc">文頭乱</label></font></span><span><font color="333333" onmouseover="this.color=&#39;lime&#39;" onmouseout="this.color=&#39;333333&#39;" size="1" title="文末ランダム"><input type="checkbox" name="rb" id="rbc" class="chk"><label for="rbc">文末乱</label></font></span></font><font face="HGP行書体"><select name="chara" id="font2">
+<option value="" id="color2" selected="selected">画像</option>
+<option value="0" id="color1">星(黄</option>
+<option value="1" id="color1">星(青</option>
+<option value="2" id="color1">星(緑</option>
+<option value="3" id="color1">星(桃</option>
+<option value="4" id="color1">陽(黄</option>
+<option value="5" id="color1">陽(赤</option>
+<option value="6" id="color1">陽(桃</option>
+<option value="7" id="color1">陽(緑</option>
+<option value="8" id="color1">月(黄</option>
+<option value="9" id="color1">月(緑</option>
+<option value="10" id="color1">月(青</option>
+<option value="11" id="color1">月(紫</option>
+<option value="12" id="color1">巫女</option>
+<option value="13" id="color1">ｴﾗｰ</option>
+</select><br><select name="nfonts" id="font2">
+<option value="" id="color2" selected="selected">ﾌｫﾝﾄ</option>
+<option value="Arial" id="color1">Arial</option>
+<option value="どせいさん" id="color1">どせい</option>
+<option value="Thm" id="color1">Thm</option>
+<option value="ＭＳ Ｐ明朝" id="color1">明朝</option>
+</select><select name="W" id="font2">
+<option value="5" id="color1">5</option>
+<option value="10" id="color1">10</option>
+<option value="20" id="color1">20</option>
+<option value="30" id="color1">30</option>
+<option value="40" id="color1">40</option>
+<option value="50" id="color1">50</option>
+<option value="60" id="color1">60</option>
+<option value="70" id="color1">70</option>
+<option value="80" id="color1">80</option>
+<option value="90" id="color1">90</option>
+<option value="100" id="color1" selected="selected">ﾛｸﾞ:全</option>
+</select><select name="SZ" id="font2">
+<option value="1" id="color1">1</option>
+<option value="2" id="color1">2</option>
+<option value="3" id="color1" selected="selected">ｻｲｽﾞ:3</option>
+<option value="4" id="color1">4</option>
+<option value="5" id="color1">5</option>
+<option value="6" id="color1">6</option>
+<option value="7" id="color1">7</option>
+</select><br><select name="R" id="font2" size="1">
+<option value="30" id="color1">30</option>
+<option value="45" id="color1">45</option>
+<option value="60" id="color1">60</option>
+<option value="0" id="color2" selected="true">更新</option>
+</select><select name="ingset" id="font2" onblur="setname()" title="ROM">
+<option value="" id="color2">名前</option>
+<option value="＠rom" id="color1">＠rom</option>
+<option value="＠作業rom" id="color1">＠作業r</option>
+<option value="＠ニ窓rom" id="color1">＠ニ窓r</option>
+<option value="＠勉強rom" id="color1">＠勉強r</option>
+<option value="＠風呂rom" id="color1">＠風呂r</option>
+<option value="＠親北rom" id="color1">＠親北r</option>
+<option value="＠飯rom" id="color1">＠飯r</option>
+</select><select name="sentence" id="font2" onblur="setname()">
+<option value="" id="color2" selected="selected">発言乱</option>
+<option value="ran" id="color1">on</option>
+</select><br><select name="nefect" id="font2">
+<option value="" id="color2" selected="selected">背景</option>
+<option value="黒背景" id="color1">黒</option>
+<option value="白背景" id="color1">白</option>
+<option value="橙背景" id="color1">橙</option>
+<option value="黄背景" id="color1">黄</option>
+<option value="緑背景" id="color1">緑</option>
+<option value="水背景" id="color1">水</option>
+<option value="青背景" id="color1">青</option>
+<option value="紫背景" id="color1">紫</option>
+<option value="桃背景" id="color1">桃</option>
+<option value="グラデ白" id="color1">グ白</option>
+<option value="グラデ橙" id="color1">グ橙</option>
+<option value="グラデ黄" id="color1">グ黄</option>
+<option value="グラデ緑" id="color1">グ緑</option>
+<option value="グラデ水" id="color1">グ水</option>
+<option value="グラデ青" id="color1">グ青</option>
+<option value="グラデ紫" id="color1">グ紫</option>
+<option value="グラデ桃" id="color1">グ桃</option>
+<option value="影1(灰)" id="color1">影1</option>
+<option value="影2(灰)" id="color1">影2</option>
+<option value="左右反転" id="color1">左右</option>
+<option value="上下反転" id="color1">上下</option>
+<option value="WAVE（緩）" id="color1">W(緩</option>
+<option value="WAVE（中）" id="color1">W(中</option>
+<option value="WAVE（激）" id="color1">W(激</option>
+<option value="WAVE（汚）" id="color1">W(汚</option>
+<option value="BLUR（陰影）" id="color1">B(陰</option>
+<option value="BLUR（霞）" id="color1">B(霞</option>
+<option value="X-線（謎）" id="color1">X(謎</option>
+<option value="マスク" id="color1">ﾏｽｸ</option>
+<option value="色反転" id="color1">色逆</option>
+<option value="凸" id="color1">凸</option>
+<option value="凹" id="color1">凹</option>
+</select><select name="color" id="font2">
+<option value="Black" id="color2" style="background-color:Black;" selected="selected">名前色:Black</option>
+<option value="Navy" style="background-color:Navy;">Navy</option>
+<option value="Darkblue" style="background-color:Darkblue;">Darkblue</option>
+<option value="Mediumblue" style="background-color:Mediumblue;">Mediumblue</option>
+<option value="Blue" style="background-color:Blue;">Blue</option>
+<option value="Darkgreen" style="background-color:Darkgreen;">Darkgreen</option>
+<option value="Green" style="background-color:Green;">Green</option>
+<option value="Teal" style="background-color:Teal;">Teal</option>
+<option value="Darkcyan" style="background-color:Darkcyan;">Darkcyan</option>
+<option value="Deepskyblue" style="background-color:Deepskyblue;">Deepskyblue</option>
+<option value="Darkturquoise" style="background-color:Darkturquoise;">Darkturquoise</option>
+<option value="Mediumspringgreen" style="background-color:Mediumspringgreen;">Mediumspringgreen</option>
+<option value="Lime" style="background-color:Lime;">Lime</option>
+<option value="Springgreen" style="background-color:Springgreen;">Springgreen</option>
+<option value="Aqua" style="background-color:Aqua;">Aqua</option>
+<option value="Cyan" style="background-color:Cyan;">Cyan</option>
+<option value="Midnightblue" style="background-color:Midnightblue;">Midnightblue</option>
+<option value="Dodgerblue" style="background-color:Dodgerblue;">Dodgerblue</option>
+<option value="Lightseagreen" style="background-color:Lightseagreen;">Lightseagreen</option>
+<option value="Forestgreen" style="background-color:Forestgreen;">Forestgreen</option>
+<option value="Seagreen" style="background-color:Seagreen;">Seagreen</option>
+<option value="Darkslategray" style="background-color:Darkslategray;">Darkslategray</option>
+<option value="Limegreen" style="background-color:Limegreen;">Limegreen</option>
+<option value="Mediumseagreen" style="background-color:Mediumseagreen;">Mediumseagreen</option>
+<option value="Turquoise" style="background-color:Turquoise;">Turquoise</option>
+<option value="Royalblue" style="background-color:Royalblue;">Royalblue</option>
+<option value="Steelblue" style="background-color:Steelblue;">Steelblue</option>
+<option value="Darkslateblue" style="background-color:Darkslateblue;">Darkslateblue</option>
+<option value="Mediumturquoise" style="background-color:Mediumturquoise;">Mediumturquoise</option>
+<option value="Indigo" style="background-color:Indigo;">Indigo</option>
+<option value="Darkolivegreen" style="background-color:Darkolivegreen;">Darkolivegreen</option>
+<option value="Cadetblue" style="background-color:Cadetblue;">Cadetblue</option>
+<option value="Cornflowerblue" style="background-color:Cornflowerblue;">Cornflowerblue</option>
+<option value="Mediumaquamarine" style="background-color:Mediumaquamarine;">Mediumaquamarine</option>
+<option value="Dimgray" style="background-color:Dimgray;">Dimgray</option>
+<option value="Slateblue" style="background-color:Slateblue;">Slateblue</option>
+<option value="Olivedrab" style="background-color:Olivedrab;">Olivedrab</option>
+<option value="Slategray" style="background-color:Slategray;">Slategray</option>
+<option value="Lightslategray" style="background-color:Lightslategray;">Lightslategray</option>
+<option value="Mediumslateblue" style="background-color:Mediumslateblue;">Mediumslateblue</option>
+<option value="Lawngreen" style="background-color:Lawngreen;">Lawngreen</option>
+<option value="Chartreuse" style="background-color:Chartreuse;">Chartreuse</option>
+<option value="Aquamarine" style="background-color:Aquamarine;">Aquamarine</option>
+<option value="Maroon" style="background-color:Maroon;">Maroon</option>
+<option value="Purple" style="background-color:Purple;">Purple</option>
+<option value="Olive" style="background-color:Olive;">Olive</option>
+<option value="Gray" style="background-color:Gray;">Gray</option>
+<option value="Skyblue" style="background-color:Skyblue;">Skyblue</option>
+<option value="Lightskyblue" style="background-color:Lightskyblue;">Lightskyblue</option>
+<option value="Blueviolet" style="background-color:Blueviolet;">Blueviolet</option>
+<option value="Darkred" style="background-color:Darkred;">Darkred</option>
+<option value="Darkmagenta" style="background-color:Darkmagenta;">Darkmagenta</option>
+<option value="Saddlebrown" style="background-color:Saddlebrown;">Saddlebrown</option>
+<option value="Darkseagreen" style="background-color:Darkseagreen;">Darkseagreen</option>
+<option value="Lightgreen" style="background-color:Lightgreen;">Lightgreen</option>
+<option value="Mediumpurple" style="background-color:Mediumpurple;">Mediumpurple</option>
+<option value="Darkviolet" style="background-color:Darkviolet;">Darkviolet</option>
+<option value="Palegreen" style="background-color:Palegreen;">Palegreen</option>
+<option value="Darkorchid" style="background-color:Darkorchid;">Darkorchid</option>
+<option value="Yellowgreen" style="background-color:Yellowgreen;">Yellowgreen</option>
+<option value="Sienna" style="background-color:Sienna;">Sienna</option>
+<option value="Brown" style="background-color:Brown;">Brown</option>
+<option value="Darkgray" style="background-color:Darkgray;">Darkgray</option>
+<option value="Lightblue" style="background-color:Lightblue;">Lightblue</option>
+<option value="Greenyellow" style="background-color:Greenyellow;">Greenyellow</option>
+<option value="Paleturquoise" style="background-color:Paleturquoise;">Paleturquoise</option>
+<option value="Lightsteelblue" style="background-color:Lightsteelblue;">Lightsteelblue</option>
+<option value="Powderblue" style="background-color:Powderblue;">Powderblue</option>
+<option value="Firebrick" style="background-color:Firebrick;">Firebrick</option>
+<option value="Darkgoldenrod" style="background-color:Darkgoldenrod;">Darkgoldenrod</option>
+<option value="Mediumorchid" style="background-color:Mediumorchid;">Mediumorchid</option>
+<option value="Rosybrown" style="background-color:Rosybrown;">Rosybrown</option>
+<option value="Darkkhaki" style="background-color:Darkkhaki;">Darkkhaki</option>
+<option value="Silver" style="background-color:Silver;">Silver</option>
+<option value="Mediumvioletred" style="background-color:Mediumvioletred;">Mediumvioletred</option>
+<option value="Indianred" style="background-color:Indianred;">Indianred</option>
+<option value="Peru" style="background-color:Peru;">Peru</option>
+<option value="Chocolate" style="background-color:Chocolate;">Chocolate</option>
+<option value="Tan" style="background-color:Tan;">Tan</option>
+<option value="Lightgrey" style="background-color:Lightgrey;">Lightgrey</option>
+<option value="Thistle" style="background-color:Thistle;">Thistle</option>
+<option value="Orchid" style="background-color:Orchid;">Orchid</option>
+<option value="Goldenrod" style="background-color:Goldenrod;">Goldenrod</option>
+<option value="Palevioletred" style="background-color:Palevioletred;">Palevioletred</option>
+<option value="Crimson" style="background-color:Crimson;">Crimson</option>
+<option value="Gainsboro" style="background-color:Gainsboro;">Gainsboro</option>
+<option value="Plum" style="background-color:Plum;">Plum</option>
+<option value="Burlywood" style="background-color:Burlywood;">Burlywood</option>
+<option value="Lightcyan" style="background-color:Lightcyan;">Lightcyan</option>
+<option value="Lavender" style="background-color:Lavender;">Lavender</option>
+<option value="Darksalmon" style="background-color:Darksalmon;">Darksalmon</option>
+<option value="Violet" style="background-color:Violet;">Violet</option>
+<option value="Palegoldenrod" style="background-color:Palegoldenrod;">Palegoldenrod</option>
+<option value="Lightcoral" style="background-color:Lightcoral;">Lightcoral</option>
+<option value="Khaki" style="background-color:Khaki;">Khaki</option>
+<option value="Aliceblue" style="background-color:Aliceblue;">Aliceblue</option>
+<option value="Honeydew" style="background-color:Honeydew;">Honeydew</option>
+<option value="Azure" style="background-color:Azure;">Azure</option>
+<option value="Sandybrown" style="background-color:Sandybrown;">Sandybrown</option>
+<option value="Wheat" style="background-color:Wheat;">Wheat</option>
+<option value="Beige" style="background-color:Beige;">Beige</option>
+<option value="Whitesmoke" style="background-color:Whitesmoke;">Whitesmoke</option>
+<option value="Mintcream" style="background-color:Mintcream;">Mintcream</option>
+<option value="Ghostwhite" style="background-color:Ghostwhite;">Ghostwhite</option>
+<option value="Salmon" style="background-color:Salmon;">Salmon</option>
+<option value="Antiquewhite" style="background-color:Antiquewhite;">Antiquewhite</option>
+<option value="Linen" style="background-color:Linen;">Linen</option>
+<option value="Lightgoldenrodyellow" style="background-color:Lightgoldenrodyellow;">L.goldenrodyellow</option>
+<option value="Oldlace" style="background-color:Oldlace;">Oldlace</option>
+<option value="Red" style="background-color:Red;">Red</option>
+<option value="Magenta" style="background-color:Magenta;">Magenta</option>
+<option value="Fuchsia" style="background-color:Fuchsia;">Fuchsia</option>
+<option value="Deeppink" style="background-color:Deeppink;">Deeppink</option>
+<option value="Orangered" style="background-color:Orangered;">Orangered</option>
+<option value="Tomato" style="background-color:Tomato;">Tomato</option>
+<option value="Hotpink" style="background-color:Hotpink;">Hotpink</option>
+<option value="Coral" style="background-color:Coral;">Coral</option>
+<option value="Darkorange" style="background-color:Darkorange;">Darkorange</option>
+<option value="Lightsalmon" style="background-color:Lightsalmon;">Lightsalmon</option>
+<option value="Orange" style="background-color:Orange;">Orange</option>
+<option value="Lightpink" style="background-color:Lightpink;">Lightpink</option>
+<option value="Pink" style="background-color:Pink;">Pink</option>
+<option value="Gold" style="background-color:Gold;">Gold</option>
+<option value="Peachpuff" style="background-color:Peachpuff;">Peachpuff</option>
+<option value="Navajowhite" style="background-color:Navajowhite;">Navajowhite</option>
+<option value="Moccasin" style="background-color:Moccasin;">Moccasin</option>
+<option value="Disque" style="background-color:Disque;">Disque</option>
+<option value="Mistyrose" style="background-color:Mistyrose;">Mistyrose</option>
+<option value="Blanchedalmond" style="background-color:Blanchedalmond;">Blanchedalmond</option>
+<option value="Papayawhip" style="background-color:Papayawhip;">Papayawhip</option>
+<option value="Lavenderblush" style="background-color:Lavenderblush;">Lavenderblush</option>
+<option value="Seashell" style="background-color:Seashell;">Seashell</option>
+<option value="Cornsilk" style="background-color:Cornsilk;">Cornsilk</option>
+<option value="Lemonchiffon" style="background-color:Lemonchiffon;">Lemonchiffon</option>
+<option value="Floralwhite" style="background-color:Floralwhite;">Floralwhite</option>
+<option value="Snow" style="background-color:Snow;">Snow</option>
+<option value="Yellow" style="background-color:Yellow;">Yellow</option>
+<option value="Lightyellow" style="background-color:Lightyellow;">Lightyellow</option>
+<option value="Ivory" style="background-color:Ivory;">Ivory</option>
+<option value="White" style="background-color:White;">White</option>
+</select><br>
+<span><select name="nborder" id="font2">
+<option value="" id="color2" selected="selected">装飾</option>
+<option value="下線" id="color1">下線</option>
+<option value="ボーダー白" id="color1">B白</option>
+<option value="ボーダー橙" id="color1">B橙</option>
+<option value="ボーダー黄" id="color1">B黄</option>
+<option value="ボーダー緑" id="color1">B緑</option>
+<option value="ボーダー水" id="color1">B水</option>
+<option value="ボーダー青" id="color1">B青</option>
+<option value="ボーダー紫" id="color1">B紫</option>
+<option value="ボーダー桃" id="color1">B桃</option>
+<option value="ダッシュ白" id="color1">D白</option>
+<option value="ダッシュ橙" id="color1">D橙</option>
+<option value="ダッシュ黄" id="color1">D黄</option>
+<option value="ダッシュ緑" id="color1">D緑</option>
+<option value="ダッシュ水" id="color1">D水</option>
+<option value="ダッシュ青" id="color1">D青</option>
+<option value="ダッシュ紫" id="color1">D紫</option>
+<option value="ダッシュ桃" id="color1">D桃</option>
+<option value="点線白" id="color1">点白</option>
+<option value="点線橙" id="color1">点橙</option>
+<option value="点線黄" id="color1">点黄</option>
+<option value="点線緑" id="color1">点緑</option>
+<option value="点線水" id="color1">点水</option>
+<option value="点線青" id="color1">点青</option>
+<option value="点線紫" id="color1">点紫</option>
+<option value="点線桃" id="color1">点桃</option>
+</select></span><span><select name="CL" id="font2">
+<option value="Black" id="color2" style="background-color:Black;" selected="selected">発言色:Black</option>
+<option value="Navy" style="background-color:Navy;">Navy</option>
+<option value="Darkblue" style="background-color:Darkblue;">Darkblue</option>
+<option value="Mediumblue" style="background-color:Mediumblue;">Mediumblue</option>
+<option value="Blue" style="background-color:Blue;">Blue</option>
+<option value="Darkgreen" style="background-color:Darkgreen;">Darkgreen</option>
+<option value="Green" style="background-color:Green;">Green</option>
+<option value="Teal" style="background-color:Teal;">Teal</option>
+<option value="Darkcyan" style="background-color:Darkcyan;">Darkcyan</option>
+<option value="Deepskyblue" style="background-color:Deepskyblue;">Deepskyblue</option>
+<option value="Darkturquoise" style="background-color:Darkturquoise;">Darkturquoise</option>
+<option value="Mediumspringgreen" style="background-color:Mediumspringgreen;">Mediumspringgreen</option>
+<option value="Lime" style="background-color:Lime;">Lime</option>
+<option value="Springgreen" style="background-color:Springgreen;">Springgreen</option>
+<option value="Aqua" style="background-color:Aqua;">Aqua</option>
+<option value="Cyan" style="background-color:Cyan;">Cyan</option>
+<option value="Midnightblue" style="background-color:Midnightblue;">Midnightblue</option>
+<option value="Dodgerblue" style="background-color:Dodgerblue;">Dodgerblue</option>
+<option value="Lightseagreen" style="background-color:Lightseagreen;">Lightseagreen</option>
+<option value="Forestgreen" style="background-color:Forestgreen;">Forestgreen</option>
+<option value="Seagreen" style="background-color:Seagreen;">Seagreen</option>
+<option value="Darkslategray" style="background-color:Darkslategray;">Darkslategray</option>
+<option value="Limegreen" style="background-color:Limegreen;">Limegreen</option>
+<option value="Mediumseagreen" style="background-color:Mediumseagreen;">Mediumseagreen</option>
+<option value="Turquoise" style="background-color:Turquoise;">Turquoise</option>
+<option value="Royalblue" style="background-color:Royalblue;">Royalblue</option>
+<option value="Steelblue" style="background-color:Steelblue;">Steelblue</option>
+<option value="Darkslateblue" style="background-color:Darkslateblue;">Darkslateblue</option>
+<option value="Mediumturquoise" style="background-color:Mediumturquoise;">Mediumturquoise</option>
+<option value="Indigo" style="background-color:Indigo;">Indigo</option>
+<option value="Darkolivegreen" style="background-color:Darkolivegreen;">Darkolivegreen</option>
+<option value="Cadetblue" style="background-color:Cadetblue;">Cadetblue</option>
+<option value="Cornflowerblue" style="background-color:Cornflowerblue;">Cornflowerblue</option>
+<option value="Mediumaquamarine" style="background-color:Mediumaquamarine;">Mediumaquamarine</option>
+<option value="Dimgray" style="background-color:Dimgray;">Dimgray</option>
+<option value="Slateblue" style="background-color:Slateblue;">Slateblue</option>
+<option value="Olivedrab" style="background-color:Olivedrab;">Olivedrab</option>
+<option value="Slategray" style="background-color:Slategray;">Slategray</option>
+<option value="Lightslategray" style="background-color:Lightslategray;">Lightslategray</option>
+<option value="Mediumslateblue" style="background-color:Mediumslateblue;">Mediumslateblue</option>
+<option value="Lawngreen" style="background-color:Lawngreen;">Lawngreen</option>
+<option value="Chartreuse" style="background-color:Chartreuse;">Chartreuse</option>
+<option value="Aquamarine" style="background-color:Aquamarine;">Aquamarine</option>
+<option value="Maroon" style="background-color:Maroon;">Maroon</option>
+<option value="Purple" style="background-color:Purple;">Purple</option>
+<option value="Olive" style="background-color:Olive;">Olive</option>
+<option value="Gray" style="background-color:Gray;">Gray</option>
+<option value="Skyblue" style="background-color:Skyblue;">Skyblue</option>
+<option value="Lightskyblue" style="background-color:Lightskyblue;">Lightskyblue</option>
+<option value="Blueviolet" style="background-color:Blueviolet;">Blueviolet</option>
+<option value="Darkred" style="background-color:Darkred;">Darkred</option>
+<option value="Darkmagenta" style="background-color:Darkmagenta;">Darkmagenta</option>
+<option value="Saddlebrown" style="background-color:Saddlebrown;">Saddlebrown</option>
+<option value="Darkseagreen" style="background-color:Darkseagreen;">Darkseagreen</option>
+<option value="Lightgreen" style="background-color:Lightgreen;">Lightgreen</option>
+<option value="Mediumpurple" style="background-color:Mediumpurple;">Mediumpurple</option>
+<option value="Darkviolet" style="background-color:Darkviolet;">Darkviolet</option>
+<option value="Palegreen" style="background-color:Palegreen;">Palegreen</option>
+<option value="Darkorchid" style="background-color:Darkorchid;">Darkorchid</option>
+<option value="Yellowgreen" style="background-color:Yellowgreen;">Yellowgreen</option>
+<option value="Sienna" style="background-color:Sienna;">Sienna</option>
+<option value="Brown" style="background-color:Brown;">Brown</option>
+<option value="Darkgray" style="background-color:Darkgray;">Darkgray</option>
+<option value="Lightblue" style="background-color:Lightblue;">Lightblue</option>
+<option value="Greenyellow" style="background-color:Greenyellow;">Greenyellow</option>
+<option value="Paleturquoise" style="background-color:Paleturquoise;">Paleturquoise</option>
+<option value="Lightsteelblue" style="background-color:Lightsteelblue;">Lightsteelblue</option>
+<option value="Powderblue" style="background-color:Powderblue;">Powderblue</option>
+<option value="Firebrick" style="background-color:Firebrick;">Firebrick</option>
+<option value="Darkgoldenrod" style="background-color:Darkgoldenrod;">Darkgoldenrod</option>
+<option value="Mediumorchid" style="background-color:Mediumorchid;">Mediumorchid</option>
+<option value="Rosybrown" style="background-color:Rosybrown;">Rosybrown</option>
+<option value="Darkkhaki" style="background-color:Darkkhaki;">Darkkhaki</option>
+<option value="Silver" style="background-color:Silver;">Silver</option>
+<option value="Mediumvioletred" style="background-color:Mediumvioletred;">Mediumvioletred</option>
+<option value="Indianred" style="background-color:Indianred;">Indianred</option>
+<option value="Peru" style="background-color:Peru;">Peru</option>
+<option value="Chocolate" style="background-color:Chocolate;">Chocolate</option>
+<option value="Tan" style="background-color:Tan;">Tan</option>
+<option value="Lightgrey" style="background-color:Lightgrey;">Lightgrey</option>
+<option value="Thistle" style="background-color:Thistle;">Thistle</option>
+<option value="Orchid" style="background-color:Orchid;">Orchid</option>
+<option value="Goldenrod" style="background-color:Goldenrod;">Goldenrod</option>
+<option value="Palevioletred" style="background-color:Palevioletred;">Palevioletred</option>
+<option value="Crimson" style="background-color:Crimson;">Crimson</option>
+<option value="Gainsboro" style="background-color:Gainsboro;">Gainsboro</option>
+<option value="Plum" style="background-color:Plum;">Plum</option>
+<option value="Burlywood" style="background-color:Burlywood;">Burlywood</option>
+<option value="Lightcyan" style="background-color:Lightcyan;">Lightcyan</option>
+<option value="Lavender" style="background-color:Lavender;">Lavender</option>
+<option value="Darksalmon" style="background-color:Darksalmon;">Darksalmon</option>
+<option value="Violet" style="background-color:Violet;">Violet</option>
+<option value="Palegoldenrod" style="background-color:Palegoldenrod;">Palegoldenrod</option>
+<option value="Lightcoral" style="background-color:Lightcoral;">Lightcoral</option>
+<option value="Khaki" style="background-color:Khaki;">Khaki</option>
+<option value="Aliceblue" style="background-color:Aliceblue;">Aliceblue</option>
+<option value="Honeydew" style="background-color:Honeydew;">Honeydew</option>
+<option value="Azure" style="background-color:Azure;">Azure</option>
+<option value="Sandybrown" style="background-color:Sandybrown;">Sandybrown</option>
+<option value="Wheat" style="background-color:Wheat;">Wheat</option>
+<option value="Beige" style="background-color:Beige;">Beige</option>
+<option value="Whitesmoke" style="background-color:Whitesmoke;">Whitesmoke</option>
+<option value="Mintcream" style="background-color:Mintcream;">Mintcream</option>
+<option value="Ghostwhite" style="background-color:Ghostwhite;">Ghostwhite</option>
+<option value="Salmon" style="background-color:Salmon;">Salmon</option>
+<option value="Antiquewhite" style="background-color:Antiquewhite;">Antiquewhite</option>
+<option value="Linen" style="background-color:Linen;">Linen</option>
+<option value="Lightgoldenrodyellow" style="background-color:Lightgoldenrodyellow;">L.goldenrodyellow</option>
+<option value="Oldlace" style="background-color:Oldlace;">Oldlace</option>
+<option value="Red" style="background-color:Red;">Red</option>
+<option value="Magenta" style="background-color:Magenta;">Magenta</option>
+<option value="Fuchsia" style="background-color:Fuchsia;">Fuchsia</option>
+<option value="Deeppink" style="background-color:Deeppink;">Deeppink</option>
+<option value="Orangered" style="background-color:Orangered;">Orangered</option>
+<option value="Tomato" style="background-color:Tomato;">Tomato</option>
+<option value="Hotpink" style="background-color:Hotpink;">Hotpink</option>
+<option value="Coral" style="background-color:Coral;">Coral</option>
+<option value="Darkorange" style="background-color:Darkorange;">Darkorange</option>
+<option value="Lightsalmon" style="background-color:Lightsalmon;">Lightsalmon</option>
+<option value="Orange" style="background-color:Orange;">Orange</option>
+<option value="Lightpink" style="background-color:Lightpink;">Lightpink</option>
+<option value="Pink" style="background-color:Pink;">Pink</option>
+<option value="Gold" style="background-color:Gold;">Gold</option>
+<option value="Peachpuff" style="background-color:Peachpuff;">Peachpuff</option>
+<option value="Navajowhite" style="background-color:Navajowhite;">Navajowhite</option>
+<option value="Moccasin" style="background-color:Moccasin;">Moccasin</option>
+<option value="Disque" style="background-color:Disque;">Disque</option>
+<option value="Mistyrose" style="background-color:Mistyrose;">Mistyrose</option>
+<option value="Blanchedalmond" style="background-color:Blanchedalmond;">Blanchedalmond</option>
+<option value="Papayawhip" style="background-color:Papayawhip;">Papayawhip</option>
+<option value="Lavenderblush" style="background-color:Lavenderblush;">Lavenderblush</option>
+<option value="Seashell" style="background-color:Seashell;">Seashell</option>
+<option value="Cornsilk" style="background-color:Cornsilk;">Cornsilk</option>
+<option value="Lemonchiffon" style="background-color:Lemonchiffon;">Lemonchiffon</option>
+<option value="Floralwhite" style="background-color:Floralwhite;">Floralwhite</option>
+<option value="Snow" style="background-color:Snow;">Snow</option>
+<option value="Yellow" style="background-color:Yellow;">Yellow</option>
+<option value="Lightyellow" style="background-color:Lightyellow;">Lightyellow</option>
+<option value="Ivory" style="background-color:Ivory;">Ivory</option>
+<option value="White" style="background-color:White;">White</option>
+</select></span><br><span><input name="vururuid" id="text1" size="5" title="VururuID" onmouseover="this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/vururuid.png)&#39;;" style="background-image: url(&#39;/web/20130601150606im_/http://www25.atpages.jp/failurepile/chiri/failurepile/png/vururuid.png&#39;);"></span><span><input type="text" name="email" size="22" id="text1" title="URL/メールアドレス" onmouseover="this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/email.png)&#39;;" style="background-image: url(&quot;https://web.archive.org/web/20130601150606/http://www25.atpages.jp/failurepile/chiri/failurepile/png/email.png&quot;);"></span><br><input type="hidden" size="" name="N" value="" id="text1" readonly="readonly"><span><input type="text" size="22" name="NF" onblur="setname()" id="text1" title="名前" onmouseover="this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/N.png)&#39;;" style="background-image: url(&#39;/web/20130601150606im_/http://www25.atpages.jp/failurepile/chiri/failurepile/png/N.png&#39;);"></span></font><select id="changeSelect" name="hoge" onchange="entryChange2();">
+<option value="select1" selected="selected">文頭</option><option value="select2">文末</option>
+</select><div id="firstBox2"><input type="text" name="front" size="25" id="text1" class="form1" title="文頭" onmouseover="this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/front.png)&#39;;" style="background-image: url(&quot;https://web.archive.org/web/20130601150606/http://www25.atpages.jp/failurepile/chiri/failurepile/png/front.png&quot;);"></div><div id="secondBox2" style="display: none;"><input type="text" name="back" size="25" id="text1" class="form1" title="文末" onmouseover="this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/back.png)&#39;;" style="background-image: url(&#39;/web/20130601150606im_/http://www25.atpages.jp/failurepile/chiri/failurepile/png/back.png&#39;);"></div><input type="text" name="emoji" size="25" id="text1" class="form1" title="追加" onmouseover="this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/emoji.png)&#39;;" style="background-image: url(&quot;https://web.archive.org/web/20130601150606/http://www25.atpages.jp/failurepile/chiri/failurepile/png/emoji.png&quot;);"><br><input type="text" size="20" name="chat" id="text1" class="form1" title="発言" onmouseover="this.focus(),this.style.backgroundImage = &#39;url(./png/bg.png)&#39;;" onmouseout="this.style.backgroundImage = &#39;url(./png/chat.png)&#39;;" style="background-image: url(&quot;https://web.archive.org/web/20130601150606/http://www25.atpages.jp/failurepile/chiri/failurepile/png/chat.png&quot;);"><br><input type="submit" value="　　　 　　更　　新　　 　　　" name="sendvip" id="button1" title="更新" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><br><input type="button" value="入室" onclick="eroom();" id="button1" title="入室" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><input type="submit" value="退室" onclick="outroom(),document.VIP.chat.focus()" name="out" id="button1" title="退室" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><input type="button" value="除" onclick="setfilter()" id="button1" title="フィルタ" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><input type="reset" value="消" onclick="return confirm(&#39;フォーム入力内容を削除します。よろしいですか？&#39;);" id="button1" title="入力消去" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);">
+<script type="text/javascript">
+function entryChange2(){
+if(document.getElementById('changeSelect')){
+id = document.getElementById('changeSelect').value;
+
+if(id == 'select1'){
+document.getElementById('firstBox2').style.display = "";
+document.getElementById('secondBox2').style.display = "none";
+}else if(id == 'select2'){
+document.getElementById('firstBox2').style.display = "none";
+document.getElementById('secondBox2').style.display = "";
+}
+}
+}
+window.onload = entryChange2;
+</script>
+
+<form method="" name="enter" target="down" onsubmit="convert()">
+<input type="hidden" name="N">
+<input type="hidden" name="name">
+<input type="hidden" name="color">
+</form><input value="巻戻" id="button1" type="button" target="down" title="ログを巻き戻す" onclick="self.history.back()"><input value="保存" id="button1" type="button" onclick="saveValue(forms[0])" title="クッキーに状態を保存" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><input value="呼出" id="button1" type="button" onclick="restoreValue(forms[0])" title="前回の状態を読込" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><input type="button" value="人数" id="button1" onclick="show(&#39;1&#39;);" title="参加人数" onmouseover="this.style.backgroundColor=&#39;#606060&#39;" onmouseout="this.style.backgroundColor=&#39;#333333&#39;" style="background-color: rgb(51, 51, 51);"><b><div id="msgid3" style="font-size: 15px; color: #ff0000"></div></b><script type="text/JavaScript">
+<!--
+changeMsg();
+//--></script><div id="layer_1" style="display: none;position:relative;" class="close">
+<iframe src="./menu_files/menu.html" width="180" height="260" frameborder="0"></iframe>
+</div>
+</div></form></body>
+<style type="text/css">
+
+  BODY {
+    SCROLLBAR-ARROW-COLOR: #505050; SCROLLBAR-FACE-COLOR: #202020; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #000000; MARGIN: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; SCROLLBAR-DARKSHADOW-COLOR: #404040; SCROLLBAR-HIGHLIGHT-COLOR: #101010; SCROLLBAR-SHADOW-COLOR: #303030; SCROLLBAR-TRACK-COLOR: #000030; SCROLLBAR-3DLIGHT-COLOR: #000000; PADDING-TOP: 0px
+  }
+  A:link {
+    FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: deepskyblue; FONT-SIZE: 11px; TEXT-DECORATION: none
+  }
+  A:visited {
+    FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: deepskyblue; FONT-SIZE: 11px; TEXT-DECORATION: none
+  }
+  A:active {
+    FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: deepskyblue; FONT-SIZE: 11px; TEXT-DECORATION: none
+  }
+  A:hover {
+    FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: orange; FONT-SIZE: 11px; TEXT-DECORATION: none
+  }
+  #text1 {
+    BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; BACKGROUND-COLOR: white; FONT-FAMILY: ＭＳ Ｐゴシック; COLOR: black; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver 1px solid
+  }
+  #text2 {
+    BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; BACKGROUND-COLOR: white; FONT-FAMILY: ＭＳ Ｐゴシック; COLOR: darkred; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver 1px solid
+  }
+  #button1 {
+    BORDER-BOTTOM: #303030 2px solid; BORDER-LEFT: #202020 2px solid; BACKGROUND-COLOR: #202020; FONT-FAMILY: HGP行書体; COLOR: white; BORDER-TOP: #303030 1px solid; BORDER-RIGHT: #404040 2px solid
+  }
+  #button2 {
+    BORDER-BOTTOM: #303030 2px solid; BORDER-LEFT: #202020 2px solid; BACKGROUND-COLOR: #300000; FONT-FAMILY: HGP行書体; COLOR: white; BORDER-TOP: #303030 1px solid; BORDER-RIGHT: #404040 2px solid
+  }
+  #color1 {
+    COLOR: #000000
+  }
+  #color2 {
+    COLOR: #c0c0c0
+  }
+  #font1 {
+    FONT-FAMILY: ＭＳ Ｐ明朝
+  }
+  #font2 {
+    FONT-FAMILY: HGP行書体
+  }
+  
+  </style></html>

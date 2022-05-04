@@ -1,0 +1,40 @@
+
+BODY {
+	SCROLLBAR-ARROW-COLOR: #505050; SCROLLBAR-FACE-COLOR: #202020; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #000000; MARGIN: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; SCROLLBAR-DARKSHADOW-COLOR: #404040; SCROLLBAR-HIGHLIGHT-COLOR: #101010; SCROLLBAR-SHADOW-COLOR: #303030; SCROLLBAR-TRACK-COLOR: #000030; SCROLLBAR-3DLIGHT-COLOR: #000000; PADDING-TOP: 0px
+}
+A:link {
+	FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: deepskyblue; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: deepskyblue; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A:active {
+	FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: deepskyblue; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-FAMILY: HGP創英角ﾎﾟｯﾌﾟ体; COLOR: orange; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+#text1 {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; BACKGROUND-COLOR: white; FONT-FAMILY: ＭＳ Ｐゴシック; COLOR: black; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver 1px solid
+}
+#text2 {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; BACKGROUND-COLOR: white; FONT-FAMILY: ＭＳ Ｐゴシック; COLOR: darkred; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver 1px solid
+}
+#button1 {
+	BORDER-BOTTOM: #303030 2px solid; BORDER-LEFT: #202020 2px solid; BACKGROUND-COLOR: #202020; FONT-FAMILY: HGP行書体; COLOR: white; BORDER-TOP: #303030 1px solid; BORDER-RIGHT: #404040 2px solid
+}
+#button2 {
+	BORDER-BOTTOM: #303030 2px solid; BORDER-LEFT: #202020 2px solid; BACKGROUND-COLOR: #300000; FONT-FAMILY: HGP行書体; COLOR: white; BORDER-TOP: #303030 1px solid; BORDER-RIGHT: #404040 2px solid
+}
+#color1 {
+	COLOR: #000000
+}
+#color2 {
+	COLOR: #c0c0c0
+}
+#font1 {
+	FONT-FAMILY: ＭＳ Ｐ明朝
+}
+#font2 {
+	FONT-FAMILY: HGP行書体
+}
